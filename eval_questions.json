@@ -1,0 +1,152 @@
+[
+  {
+    "query": "What are the types of brain tumors?",
+    "expected": "Types of brain tumors",
+    "answer": "There are over 120 different types of brain tumors. Common ones include gliomas (astrocytoma grades I-IV such as pilocytic, diffuse, anaplastic, glioblastoma multiforme, oligodendroglioma, ependymoma), craniopharyngioma, epidermoid, lymphoma, meningioma and schwannoma."
+  },
+  {
+    "query": "What causes brain tumors?",
+    "expected": "tumor cells reproduce",
+    "answer": "Tumor is abnormal tissue that grows by uncontrolled cell division. Normal cells grow in a controlled manner, but for reasons not fully understood, tumor cells reproduce uncontrollably."
+  },
+  {
+    "query": "Which imaging tests are used to diagnose brain tumors?",
+    "expected": "How is a diagnosis made?",
+    "answer": "The doctor first obtains the patient's personal and family medical history and performs a complete examination, then uses imaging tests (MRI) to diagnose brain tumors."
+  },
+  {
+    "query": "How is radiation therapy used to treat brain tumors?",
+    "expected": "Radiation",
+    "answer": "Radiation therapy uses high-energy rays to kill tumor cells; it is one of the treatment options and may be used after surgery or for tumors that cannot be surgically removed."
+  },
+  {
+    "query": "What are the common symptoms of brain tumors?",
+    "expected": "Frontal lobe tumors may cause",
+    "answer": "Symptoms depend on tumor location: frontal lobe tumors may cause behavioral/emotional changes, impaired judgment, impaired sense of smell, memory loss, paralysis on one side, reduced mental abilities and vision loss; parietal lobe tumors affect speech and recognition; temporal lobe tumors affect speech and memory."
+  },
+  {
+    "query": "What treatments are available for brain tumors?",
+    "expected": "What treatments are available?",
+    "answer": "Treatment options vary depending on type, grade, size and location of the tumor, whether it has spread, and the patient's age and general health. The goal may be curative or to manage symptoms; options include surgery, radiation and chemotherapy."
+  },
+  {
+    "query": "Who treats brain tumors?",
+    "expected": "Who treats brain tumors?",
+    "answer": "A multidisciplinary team may be involved, including a neurosurgeon, oncologist, radiation oncologist, radiologist, neurologist and neuro-ophthalmologist."
+  },
+  {
+    "query": "How does chemotherapy work for brain tumors?",
+    "expected": "Chemotherapy",
+    "answer": "Chemotherapy drugs work by interrupting cell division. However, they affect not only tumor cells but also normal cells."
+  },
+  {
+    "query": "What is the goal of brain tumor surgery?",
+    "expected": "Surgery",
+    "answer": "Surgery is the treatment of choice for tumors that can be reached without significant injury to eloquent tissue. It helps refine the diagnosis, remove as much tumor as possible and release pressure inside the skull."
+  },
+  {
+    "query": "Which model achieved the best accuracy for brain tumor detection from MRI images?",
+    "expected": "EfficientNetB4",
+    "answer": "EfficientNetB4 achieved the best accuracy of 95% for brain tumor detection among CNN and transfer-learning models tested (including InceptionV3, EfficientNetB4 and VGG19)."
+  },
+  {
+    "query": "Why is preprocessing important before chest X-ray classification?",
+    "expected": "Preprocessing",
+    "answer": "The preprocessing phase prepares X-ray images for CNN classification; steps such as histogram equalization, CLAHE and complement are applied to improve classification performance."
+  },
+  {
+    "query": "What is transfer learning and how is it used for medical imaging classification?",
+    "expected": "transfer learning",
+    "answer": "Transfer learning reuses a CNN pre-trained on a large dataset and adapts it to a new task, e.g. classifying brain tumor or COVID-19 images, which improves performance with limited medical data."
+  },
+  {
+    "query": "Which image enhancement techniques are applied to X-ray images in the study?",
+    "expected": "histeq",
+    "answer": "Techniques such as histeq (histogram equalization), CLAHE and complement are applied to enhance the original X-ray images before feeding them to pre-trained CNN models."
+  },
+  {
+    "query": "Which pre-trained CNN models are used for chest X-ray classification?",
+    "expected": "VGG19",
+    "answer": "VGG19 and EfficientNetB0 are the two pre-trained CNN models used to classify chest X-ray images into COVID-19 positive or normal cases."
+  },
+  {
+    "query": "What is the standard diagnosis of COVID-19 based on and what is its limitation?",
+    "expected": "swabs from the throat and nose",
+    "answer": "The standard diagnosis of COVID-19 is based on swabs from the throat and nose; their sensitivity is not high enough and they are prone to errors, so early diagnosis via imaging such as chest X-ray is valuable."
+  },
+  {
+    "query": "Where and when did COVID-19 first appear?",
+    "expected": "Wuhan",
+    "answer": "COVID-19 is a kind of coronavirus that appeared in China in the Province of Wuhan in December 2019."
+  },
+  {
+    "query": "Why is segmentation a critical operation in automated skin lesion analysis?",
+    "expected": "Segmentation is a challenging and critical operation",
+    "answer": "Segmentation is a challenging and critical operation in the automated skin lesion analysis pipeline: it separates the lesion from the surrounding skin, which is the foundation for subsequent diagnosis."
+  },
+  {
+    "query": "What is the main obstacle in obtaining skin lesion data?",
+    "expected": "Input Data",
+    "answer": "Obtaining data in sufficient quantity and quality is often a significant obstacle for training skin lesion segmentation models."
+  },
+  {
+    "query": "What loss functions are discussed for skin lesion segmentation?",
+    "expected": "Loss Functions",
+    "answer": "The segmentation model maps an input image to an estimated binary mask separating the lesion from surrounding skin; training consists of finding model parameters that minimize a loss function over the training set."
+  },
+  {
+    "query": "What is the output of a skin lesion segmentation model?",
+    "expected": "binary mask",
+    "answer": "For skin lesions, the output is a binary mask separating the lesion from the surrounding skin."
+  },
+  {
+    "query": "What is task-incremental learning (TIL) in medical image segmentation?",
+    "expected": "Task-Incremental Learning",
+    "answer": "In the TIL scenario, a segmentation model is trained sequentially on multiple segmentation tasks (e.g. cardiac, fundus, prostate) while data for each task arrives one after another."
+  },
+  {
+    "query": "Which datasets were used to evaluate the TIL segmentation framework?",
+    "expected": "cardiac MRI segmentation",
+    "answer": "Three tasks were used: cardiac MRI segmentation with 320 subjects, fundus segmentation with 1060 subjects, and prostate MRI segmentation with 116 subjects."
+  },
+  {
+    "query": "Which metrics were used to evaluate the TIL segmentation model?",
+    "expected": "Dice Score Coefficient",
+    "answer": "The model was evaluated on current and previous tasks using the Dice Score Coefficient (DSC) and the 95% Hausdorff Distance (HD)."
+  },
+  {
+    "query": "What segmentation backbone was used in the TIL framework?",
+    "expected": "Res-UNet",
+    "answer": "A 2D Res-UNet was used as the segmentation backbone due to its strong generalist transferability, trained with the Adam optimizer."
+  },
+  {
+    "query": "Why is forcing the prior weight to equal the number of classes problematic in EDL?",
+    "expected": "prior weight",
+    "answer": "If the number of classes is large (e.g. 100), the prior weight becomes as high as 100, which dilutes the accumulated evidence so the model behaves as if it is highly uncertain even with strong evidence."
+  },
+  {
+    "query": "What does the concentration parameter do in the Dirichlet distribution for evidential deep learning?",
+    "expected": "Dirichlet",
+    "answer": "The concentration parameter is the final computed parameter used to construct the Dirichlet distribution for the evidential model."
+  },
+  {
+    "query": "What is the role of the Task-Oriented Adapter (TOA) in the TIL framework?",
+    "expected": "Task-Oriented Adapter",
+    "answer": "In the TIL scenario, the BJD backbone needs to scale across diverse data distributions; the Task-Oriented Adapter adapts the model to each task to address distribution shift."
+  },
+  {
+    "query": "What is the main contribution of the COVID-19 X-ray classification framework?",
+    "expected": "classify chest X-ray images as COVID-19",
+    "answer": "The research develops a framework to classify chest X-ray images as COVID-19 positive or normal cases, using enhanced images with pre-trained CNN models such as VGG19 and EfficientNetB0."
+  },
+  {
+    "query": "How does a brain tumor get its name?",
+    "expected": "named after the cell type",
+    "answer": "Brain tumors are named after the cell type from which they grow; they may be primary (starting in the brain) or secondary."
+  },
+  {
+    "query": "What equipment is used to diagnose brain tumors in the reviewed study?",
+    "expected": "magnetic resonance imaging",
+    "answer": "Diagnosis for brain health is provided by magnetic resonance imaging (MRI) devices, which help health decision makers in critical organs such as the brain."
+  }
+]

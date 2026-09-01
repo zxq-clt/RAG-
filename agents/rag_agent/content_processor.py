@@ -1,10 +1,6 @@
 import re
 import logging
-from typing import List, Dict, Any, Optional, Tuple
-
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-from langchain_openai import AzureOpenAIEmbeddings, AzureChatOpenAI
+from typing import List, Any
 
 class ContentProcessor:
     """
@@ -21,82 +17,113 @@ class ContentProcessor:
         self.summarizer_model = config.rag.summarizer_model     # temperature 0.5
         self.chunker_model = config.rag.chunker_model     # temperature 0.0
     
+    # def summarize_images(self, images: List[str]) -> List[str]:
+    #     """
+    #     Summarize images using the provided model, with error handling.
+    #
+    #     Args:
+    #         images: List of image paths
+    #
+    #     Returns:
+    #         List of image summaries, with placeholders for failed images
+    #     """
+    #
+    #     prompt_template = """Describe the image in detail while keeping it concise and to the point.
+    #                     For context, the image is part of either a medical research paper or a research paper
+    #                     demonstrating the use of artificial intelligence techniques like
+    #                     machine learning and deep learning in diagnosing diseases or a medical report.
+    #                     Be specific about graphs, such as bar plots if they are present in the image.
+    #                     Only summarize what is present in the image, without adding any extra detail or comment.
+    #                     Summarize the image only if it is related to the context, return 'non-informative' explicitly
+    #                     if the image is of some button not relevant to the context."""
+    #
+    #     messages = [
+    #         (
+    #             "user",
+    #             [
+    #                 {"type": "text", "text": prompt_template},
+    #                 {
+    #                     "type": "image_url",
+    #                     "image_url": {"url": "{image}"},
+    #                 },
+    #             ],
+    #         )
+    #     ]
+    #
+    #     prompt = ChatPromptTemplate.from_messages(messages)
+    #     summary_chain = prompt | self.summarizer_model | StrOutputParser()
+    #
+    #     results = []
+    #     for image in images:
+    #         try:
+    #             summary = summary_chain.invoke({"image": image})
+    #             results.append(summary)
+    #         except Exception as e:
+    #             # Log the error if needed
+    #             print(f"Error processing image: {str(e)}")
+    #             # Add placeholder for the failed image
+    #             results.append("no image summary")
+    #
+    #     return results
     def summarize_images(self, images: List[str]) -> List[str]:
         """
-        Summarize images using the provided model, with error handling.
-        
-        Args:
-            images: List of image paths
-            
-        Returns:
-            List of image summaries, with placeholders for failed images
+        Summarize images using the provided model.
+        If the LLM does not support multimodal input, return empty list.
         """
-        
-        prompt_template = """Describe the image in detail while keeping it concise and to the point. 
-                        For context, the image is part of either a medical research paper or a research paper
-                        demonstrating the use of artificial intelligence techniques like
-                        machine learning and deep learning in diagnosing diseases or a medical report.
-                        Be specific about graphs, such as bar plots if they are present in the image.
-                        Only summarize what is present in the image, without adding any extra detail or comment.
-                        Summarize the image only if it is related to the context, return 'non-informative' explicitly 
-                        if the image is of some button not relevant to the context."""
-
-        messages = [
-            (
-                "user",
-                [
-                    {"type": "text", "text": prompt_template},
-                    {
-                        "type": "image_url",
-                        "image_url": {"url": "{image}"},
-                    },
-                ],
-            )
-        ]
-
-        prompt = ChatPromptTemplate.from_messages(messages)
-        summary_chain = prompt | self.summarizer_model | StrOutputParser()
-        
-        results = []
-        for image in images:
-            try:
-                summary = summary_chain.invoke({"image": image})
-                results.append(summary)
-            except Exception as e:
-                # Log the error if needed
-                print(f"Error processing image: {str(e)}")
-                # Add placeholder for the failed image
-                results.append("no image summary")
-        
-        return results
-    
-    def format_document_with_images(self, parsed_document: Any, image_summaries: List[str]) -> str:
+        # 如果你的 LLM 不支持图片，直接返回空列表
+        return []
+        # 否则，保留原有逻辑（但现在用不到）
+    # def format_document_with_images(self, parsed_document: Any, image_summaries: List[str]) -> str:
+    #     """
+    #     Format the parsed document by replacing image placeholders with image summaries.
+    #
+    #     Args:
+    #         parsed_document: Parsed document from doc_parser
+    #         image_summaries: List of image summaries
+    #
+    #     Returns:
+    #         Formatted document text with image summaries
+    #     """
+    #     IMAGE_PLACEHOLDER = "<!-- image_placeholder -->"
+    #     PAGE_BREAK_PLACEHOLDER = "<!-- page_break -->"
+    #
+    #     formatted_parsed_document = parsed_document.export_to_markdown(
+    #         page_break_placeholder=PAGE_BREAK_PLACEHOLDER,
+    #         image_placeholder=IMAGE_PLACEHOLDER
+    #     )
+    #
+    #     formatted_document = self._replace_occurrences(
+    #         formatted_parsed_document,
+    #         IMAGE_PLACEHOLDER,
+    #         image_summaries
+    #     )
+    #
+    #     return formatted_document
+    def format_document_with_images(self, parsed_document: Any, image_summaries: List[str] = None) -> str:
         """
         Format the parsed document by replacing image placeholders with image summaries.
-        
-        Args:
-            parsed_document: Parsed document from doc_parser
-            image_summaries: List of image summaries
-            
-        Returns:
-            Formatted document text with image summaries
+        If no image summaries are provided (because LLM can't process images), placeholders
+        are simply removed.
         """
         IMAGE_PLACEHOLDER = "<!-- image_placeholder -->"
         PAGE_BREAK_PLACEHOLDER = "<!-- page_break -->"
-        
+
         formatted_parsed_document = parsed_document.export_to_markdown(
-            page_break_placeholder=PAGE_BREAK_PLACEHOLDER, 
+            page_break_placeholder=PAGE_BREAK_PLACEHOLDER,
             image_placeholder=IMAGE_PLACEHOLDER
         )
-        
-        formatted_document = self._replace_occurrences(
-            formatted_parsed_document, 
-            IMAGE_PLACEHOLDER, 
-            image_summaries
-        )
-        
+
+        # 如果没有提供摘要或列表为空，直接移除所有占位符
+        if image_summaries is None or len(image_summaries) == 0:
+            formatted_document = formatted_parsed_document.replace(IMAGE_PLACEHOLDER, '')
+        else:
+            formatted_document = self._replace_occurrences(
+                formatted_parsed_document,
+                IMAGE_PLACEHOLDER,
+                image_summaries
+            )
+
         return formatted_document
-    
     def _replace_occurrences(self, text: str, target: str, replacements: List[str]) -> str:
         """
         Replace occurrences of a target placeholder with corresponding replacements.

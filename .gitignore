@@ -181,3 +181,20 @@ cython_debug/
 
 # ignore below since it gets updated on every local run
 uploads/skin_lesion_output/segmentation_plot.png
+# 本地模型权重与模型目录（体积大，不推送 GitHub；下载方式见 README 的"模型下载"章节）
+/models/
+/ms-marco-MiniLM-L-6-v2/
+/docling-models/
+*.pth
+*.pt
+*.onnx
+*.safetensors
+*.msgpack
+
+# 本地向量库与文档解析产物（运行 ingest 后自动重建，不推送 GitHub）
+/data/qdrant_db/
+/data/qdrant_db1/
+/data/docs_db/
+/data/docs_db1/
+/data/parsed_docs/
+/data/parsed_docs1/

@@ -51,14 +51,32 @@ class MedicalDocParser:
         output_dir_path.mkdir(parents=True, exist_ok=True)
         
         # Configure pipeline options
+        # pipeline_options = PdfPipelineOptions(
+        #     generate_page_images=True,
+        #     generate_picture_images=True,
+        #     images_scale=image_resolution_scale,
+        #     do_ocr=do_ocr,
+        #     do_table_structure=do_tables,
+        #     do_formula_enrichment=do_formulas,
+        #     do_picture_description=do_picture_desc,
+        #     artifacts_path = "/app/docling-models/model_artifacts"
+        # )
         pipeline_options = PdfPipelineOptions(
+            # 关闭页面级图像生成（极大节省内存）
             generate_page_images=True,
-            generate_picture_images=True,
-            images_scale=image_resolution_scale,
-            do_ocr=do_ocr,
-            do_table_structure=do_tables,
-            do_formula_enrichment=do_formulas,
-            do_picture_description=do_picture_desc
+            # 关闭图片单独提取（若不需要单独图片描述可关闭）
+            generate_picture_images=False,
+            # 如果必须保留图片，降低缩放因子（1.0 为原始大小，可设为 0.5）
+            images_scale=0.5,
+            # 关闭公式富化（除非你确实需要识别公式）
+            do_formula_enrichment=False,
+            # 保留基本的 OCR 和表格结构（如需要）
+            do_ocr=True,
+            do_table_structure=True,
+            # 图片描述也关闭（若不需要）
+            do_picture_description=False,
+            # 模型路径保持不变
+            artifacts_path="/app/docling-models/model_artifacts"
         )
         
         # Set table structure mode

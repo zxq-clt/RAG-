@@ -66,10 +66,10 @@ class ChestXRayClassification:
                 idx = preds.cpu().numpy()[0]
                 pred_class = self.class_names[idx]
                 
-            # # Display Image
-            # plt.imshow(np.array(image))
-            # plt.title(f"Predicted: {pred_class}")
-            # plt.show()
+            # Display Image
+            plt.imshow(np.array(image))
+            plt.title(f"Predicted: {pred_class}")
+            plt.show()
 
             self.logger.info(f"Predicted Class: {pred_class}")
             
@@ -78,7 +78,7 @@ class ChestXRayClassification:
             self.logger.error(f"Error during prediction Covid Chest X-ray: {str(e)}")
             return None
 
-# if __name__ == "__main__":
-#     classifier = ChestXRayClassification('./models/covid_chest_xray_model.pth')
-#     predicted_class = classifier.predict('./images/NORMAL2-IM-0362-0001.jpeg')
-#     print(f"PREDICTED CLASS: {predicted_class}")
+if __name__ == "__main__":
+    classifier = ChestXRayClassification('./agents/image_analysis_agent/chest_xray_agent/models/covid_chest_xray_model.pth')
+    predicted_class = classifier.predict('./sample_images/chest_x-ray_covid_and_normal/NORMAL2-IM-0362-0001.jpeg')
+    print(f"PREDICTED CLASS: {predicted_class}")

@@ -1,0 +1,50 @@
+name: RAG Evaluation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "agents/rag_agent/**"
+      - "config.py"
+      - "eval_rag.py"
+      - "eval_answers.py"
+      - "eval_questions.json"
+      - "data/raw/**"
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install evaluation dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install qdrant-client langchain-qdrant fastembed sentence-transformers
+
+      # CI 环境使用在线模型（本地模型目录只存在于开发机）
+      - name: Run retrieval evaluation (30-question set)
+        env:
+          EMBEDDING_MODEL: BAAI/bge-small-zh-v1.5
+          RERANKER_MODEL: cross-encoder/ms-marco-MiniLM-L-6-v2
+        run: python eval_rag.py --questions eval_questions.json
+
+      - name: Upload evaluation results
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: eval_results.json
+
+      # 答案级评测需要 LLM API key，配置 DEEPSEEK_API_KEY 后手动触发
+      - name: Run answer-level evaluation (optional, needs DEEPSEEK_API_KEY)
+        if: env.DEEPSEEK_API_KEY != ''
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          EMBEDDING_MODEL: BAAI/bge-small-zh-v1.5
+          RERANKER_MODEL: cross-encoder/ms-marco-MiniLM-L-6-v2
+        run: python eval_answers.py

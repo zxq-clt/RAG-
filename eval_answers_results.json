@@ -1,0 +1,251 @@
+{
+  "summary": {
+    "questions": 30,
+    "retrieval_hit_rate": 0.8667,
+    "avg_faithfulness": null,
+    "avg_relevance": null,
+    "judged": 0
+  },
+  "details": [
+    {
+      "query": "What are the types of brain tumors?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What causes brain tumors?",
+      "hit": false,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Which imaging tests are used to diagnose brain tumors?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "How is radiation therapy used to treat brain tumors?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What are the common symptoms of brain tumors?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What treatments are available for brain tumors?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Who treats brain tumors?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "How does chemotherapy work for brain tumors?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What is the goal of brain tumor surgery?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Which model achieved the best accuracy for brain tumor detection from MRI images?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Why is preprocessing important before chest X-ray classification?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What is transfer learning and how is it used for medical imaging classification?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Which image enhancement techniques are applied to X-ray images in the study?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Which pre-trained CNN models are used for chest X-ray classification?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What is the standard diagnosis of COVID-19 based on and what is its limitation?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Where and when did COVID-19 first appear?",
+      "hit": false,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Why is segmentation a critical operation in automated skin lesion analysis?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What is the main obstacle in obtaining skin lesion data?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What loss functions are discussed for skin lesion segmentation?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What is the output of a skin lesion segmentation model?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What is task-incremental learning (TIL) in medical image segmentation?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Which datasets were used to evaluate the TIL segmentation framework?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Which metrics were used to evaluate the TIL segmentation model?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What segmentation backbone was used in the TIL framework?",
+      "hit": false,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "Why is forcing the prior weight to equal the number of classes problematic in EDL?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What does the concentration parameter do in the Dirichlet distribution for evidential deep learning?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What is the role of the Task-Oriented Adapter (TOA) in the TIL framework?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What is the main contribution of the COVID-19 X-ray classification framework?",
+      "hit": false,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "How does a brain tumor get its name?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    },
+    {
+      "query": "What equipment is used to diagnose brain tumors in the reviewed study?",
+      "hit": true,
+      "answer": null,
+      "faithfulness": null,
+      "relevance": null,
+      "reason": null
+    }
+  ]
+}

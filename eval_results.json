@@ -1,0 +1,1006 @@
+{
+  "DENSE 纯稠密": {
+    "stats": {
+      "hit_at_1": 0.5333333333333333,
+      "hit_at_k": 0.8333333333333334,
+      "mrr": 0.6383333333333333,
+      "precision_at_k": 0.3,
+      "recall_at_k": 0.6022222222222223
+    },
+    "details": [
+      {
+        "query": "What are the types of brain tumors?",
+        "expected": "Types of brain tumors",
+        "hit_position": 1,
+        "matched_chunk": "## Types of brain tumors\n\nThere are over 120 different types of brain tumors. Common brain tumors include:\n\nGliomas\n\n- ·",
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What causes brain tumors?",
+        "expected": "tumor cells reproduce",
+        "hit_position": 1,
+        "matched_chunk": "## patient information you can trust from our partners at MAYFIELD\n\n\n## Brain Tumors: an Introduction basic level\n\n\n## O",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which imaging tests are used to diagnose brain tumors?",
+        "expected": "How is a diagnosis made?",
+        "hit_position": 1,
+        "matched_chunk": "## How is a diagnosis made?\n\nFirst, the doctor will obtain your personal and family medical history and perform a comple",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "How is radiation therapy used to treat brain tumors?",
+        "expected": "Radiation",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.5
+      },
+      {
+        "query": "What are the common symptoms of brain tumors?",
+        "expected": "Frontal lobe tumors may cause",
+        "hit_position": 4,
+        "matched_chunk": "## Frontal lobe tumors may cause:\n\n- · Behavioral and emotional changes\n- · Impaired judgment\n- · Impaired sense of smel",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What treatments are available for brain tumors?",
+        "expected": "What treatments are available?",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Who treats brain tumors?",
+        "expected": "Who treats brain tumors?",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "How does chemotherapy work for brain tumors?",
+        "expected": "Chemotherapy",
+        "hit_position": 1,
+        "matched_chunk": "## Chemotherapy\n\nhemotherapy drugs work by interrupting cell division. However, it affects not only tumor cells but orma",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.75
+      },
+      {
+        "query": "What is the goal of brain tumor surgery?",
+        "expected": "Surgery",
+        "hit_position": 1,
+        "matched_chunk": "## Surgery\n\nSurgery is the treatment of choice for brain tumors that can be reached without causing significant injury t",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.5
+      },
+      {
+        "query": "Which model achieved the best accuracy for brain tumor detection from MRI images?",
+        "expected": "EfficientNetB4",
+        "hit_position": 5,
+        "matched_chunk": "## Material method\n\nThis section describes the dataset, the classification algorithm (CNN) used in the study, and the tr",
+        "precision_at_k": 0.2,
+        "recall_at_k": 0.2
+      },
+      {
+        "query": "Why is preprocessing important before chest X-ray classification?",
+        "expected": "Preprocessing",
+        "hit_position": 2,
+        "matched_chunk": "## Preprocessing\n\nThe purpose of the pre-processing phase is to prepare the X-ray images for classification using CNN pr",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.25
+      },
+      {
+        "query": "What is transfer learning and how is it used for medical imaging classification?",
+        "expected": "transfer learning",
+        "hit_position": 1,
+        "matched_chunk": "### OPEN\n\n\n\n\n## Brain tumor detection from images and comparison with transfer learning methods and ͹-layer CNN\n\nMohamma",
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.26666666666666666
+      },
+      {
+        "query": "Which image enhancement techniques are applied to X-ray images in the study?",
+        "expected": "histeq",
+        "hit_position": 4,
+        "matched_chunk": "## Conclusion and future work\n\nIn this research, a framework has been developed for automatically classifying chest X-ra",
+        "precision_at_k": 0.2,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "Which pre-trained CNN models are used for chest X-ray classification?",
+        "expected": "VGG19",
+        "hit_position": 1,
+        "matched_chunk": "## Experimental results\n\nThis section presents the experimental results of the proposed framework to evaluate its perfor",
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "What is the standard diagnosis of COVID-19 based on and what is its limitation?",
+        "expected": "swabs from the throat and nose",
+        "hit_position": 2,
+        "matched_chunk": "### OPEN\n\n\n\n\n## COVID-ͷ9 detection from chest X-ray images using transfer learning\n\nEnas M. F. El Houby\n\nCOVID-ͷ9 is a k",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Where and when did COVID-19 first appear?",
+        "expected": "Wuhan",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "Why is segmentation a critical operation in automated skin lesion analysis?",
+        "expected": "Segmentation is a challenging and critical operation",
+        "hit_position": 1,
+        "matched_chunk": "## 1. Introduction\n\nSegmentation is a challenging and critical operation in the automated skin lesion analysis workflow.",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is the main obstacle in obtaining skin lesion data?",
+        "expected": "Input Data",
+        "hit_position": 1,
+        "matched_chunk": "## 1. Introduction\n\nSegmentation is a challenging and critical operation in the automated skin lesion analysis workflow.",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.6
+      },
+      {
+        "query": "What loss functions are discussed for skin lesion segmentation?",
+        "expected": "Loss Functions",
+        "hit_position": 1,
+        "matched_chunk": "## 3.2. Loss Functions\n\nA segmentation model f may be formalized as a function ˆ y = f GLYPH&lt;18&gt; ( x ), which maps",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "What is the output of a skin lesion segmentation model?",
+        "expected": "binary mask",
+        "hit_position": 5,
+        "matched_chunk": "## 3.2. Loss Functions\n\nA segmentation model f may be formalized as a function ˆ y = f GLYPH&lt;18&gt; ( x ), which maps",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is task-incremental learning (TIL) in medical image segmentation?",
+        "expected": "Task-Incremental Learning",
+        "hit_position": 1,
+        "matched_chunk": "## 1 Introduction\n\nFor medical image segmentation, there is an increasing demand for a generalist model capable of handl",
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which datasets were used to evaluate the TIL segmentation framework?",
+        "expected": "cardiac MRI segmentation",
+        "hit_position": 2,
+        "matched_chunk": "## 3 Experiments\n\nDataset. We evaluated our method on three tasks: 1) cardiac MRI segmentation [2] with 320 subjects for",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which metrics were used to evaluate the TIL segmentation model?",
+        "expected": "Dice Score Coefficient",
+        "hit_position": 4,
+        "matched_chunk": "## 3 Experiments\n\nDataset. We evaluated our method on three tasks: 1) cardiac MRI segmentation [2] with 320 subjects for",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What segmentation backbone was used in the TIL framework?",
+        "expected": "Res-UNet",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "Why is forcing the prior weight to equal the number of classes problematic in EDL?",
+        "expected": "prior weight",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "What does the concentration parameter do in the Dirichlet distribution for evidential deep learning?",
+        "expected": "Dirichlet",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "What is the role of the Task-Oriented Adapter (TOA) in the TIL framework?",
+        "expected": "Task-Oriented Adapter",
+        "hit_position": 1,
+        "matched_chunk": "## 2.2 Task-Oriented Adapter (TOA)\n\nIn our TIL scenario, BJD needs to scale across diverse data distributions of previou",
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.8
+      },
+      {
+        "query": "What is the main contribution of the COVID-19 X-ray classification framework?",
+        "expected": "classify chest X-ray images as COVID-19",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "How does a brain tumor get its name?",
+        "expected": "named after the cell type",
+        "hit_position": 1,
+        "matched_chunk": "## patient information you can trust from our partners at MAYFIELD\n\n\n## Brain Tumors: an Introduction basic level\n\n\n## O",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What equipment is used to diagnose brain tumors in the reviewed study?",
+        "expected": "magnetic resonance imaging",
+        "hit_position": 2,
+        "matched_chunk": "## How is a diagnosis made?\n\nFirst, the doctor will obtain your personal and family medical history and perform a comple",
+        "precision_at_k": 0.2,
+        "recall_at_k": 0.2
+      }
+    ]
+  },
+  "SPARSE 纯BM25": {
+    "stats": {
+      "hit_at_1": 0.7,
+      "hit_at_k": 0.9333333333333333,
+      "mrr": 0.7716666666666666,
+      "precision_at_k": 0.3933333333333332,
+      "recall_at_k": 0.7666666666666667
+    },
+    "details": [
+      {
+        "query": "What are the types of brain tumors?",
+        "expected": "Types of brain tumors",
+        "hit_position": 1,
+        "matched_chunk": "## Types of brain tumors\n\nThere are over 120 different types of brain tumors. Common brain tumors include:\n\nGliomas\n\n- ·",
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What causes brain tumors?",
+        "expected": "tumor cells reproduce",
+        "hit_position": 1,
+        "matched_chunk": "## patient information you can trust from our partners at MAYFIELD\n\n\n## Brain Tumors: an Introduction basic level\n\n\n## O",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which imaging tests are used to diagnose brain tumors?",
+        "expected": "How is a diagnosis made?",
+        "hit_position": 1,
+        "matched_chunk": "## How is a diagnosis made?\n\nFirst, the doctor will obtain your personal and family medical history and perform a comple",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "How is radiation therapy used to treat brain tumors?",
+        "expected": "Radiation",
+        "hit_position": 1,
+        "matched_chunk": "## Chemotherapy\n\nhemotherapy drugs work by interrupting cell division. However, it affects not only tumor cells but orma",
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.6666666666666666
+      },
+      {
+        "query": "What are the common symptoms of brain tumors?",
+        "expected": "Frontal lobe tumors may cause",
+        "hit_position": 1,
+        "matched_chunk": "## Frontal lobe tumors may cause:\n\n- · Behavioral and emotional changes\n- · Impaired judgment\n- · Impaired sense of smel",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What treatments are available for brain tumors?",
+        "expected": "What treatments are available?",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Who treats brain tumors?",
+        "expected": "Who treats brain tumors?",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "How does chemotherapy work for brain tumors?",
+        "expected": "Chemotherapy",
+        "hit_position": 1,
+        "matched_chunk": "## Chemotherapy\n\nhemotherapy drugs work by interrupting cell division. However, it affects not only tumor cells but orma",
+        "precision_at_k": 0.8,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is the goal of brain tumor surgery?",
+        "expected": "Surgery",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.5
+      },
+      {
+        "query": "Which model achieved the best accuracy for brain tumor detection from MRI images?",
+        "expected": "EfficientNetB4",
+        "hit_position": 3,
+        "matched_chunk": "## Experimental settings and results\n\nThis study addresses the problem of image classification using deep learning metho",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.6
+      },
+      {
+        "query": "Why is preprocessing important before chest X-ray classification?",
+        "expected": "Preprocessing",
+        "hit_position": 3,
+        "matched_chunk": "## Experimental results\n\nThis section presents the experimental results of the proposed framework to evaluate its perfor",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.25
+      },
+      {
+        "query": "What is transfer learning and how is it used for medical imaging classification?",
+        "expected": "transfer learning",
+        "hit_position": 1,
+        "matched_chunk": "### OPEN\n\n\n\n\n## COVID-ͷ9 detection from chest X-ray images using transfer learning\n\nEnas M. F. El Houby\n\nCOVID-ͷ9 is a k",
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "Which image enhancement techniques are applied to X-ray images in the study?",
+        "expected": "histeq",
+        "hit_position": 2,
+        "matched_chunk": "## Conclusion and future work\n\nIn this research, a framework has been developed for automatically classifying chest X-ra",
+        "precision_at_k": 0.6,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which pre-trained CNN models are used for chest X-ray classification?",
+        "expected": "VGG19",
+        "hit_position": 1,
+        "matched_chunk": "## Conclusion and future work\n\nIn this research, a framework has been developed for automatically classifying chest X-ra",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.25
+      },
+      {
+        "query": "What is the standard diagnosis of COVID-19 based on and what is its limitation?",
+        "expected": "swabs from the throat and nose",
+        "hit_position": 1,
+        "matched_chunk": "### OPEN\n\n\n\n\n## COVID-ͷ9 detection from chest X-ray images using transfer learning\n\nEnas M. F. El Houby\n\nCOVID-ͷ9 is a k",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Where and when did COVID-19 first appear?",
+        "expected": "Wuhan",
+        "hit_position": 3,
+        "matched_chunk": "### OPEN\n\n\n\n\n## COVID-ͷ9 detection from chest X-ray images using transfer learning\n\nEnas M. F. El Houby\n\nCOVID-ͷ9 is a k",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Why is segmentation a critical operation in automated skin lesion analysis?",
+        "expected": "Segmentation is a challenging and critical operation",
+        "hit_position": 1,
+        "matched_chunk": "## 1. Introduction\n\nSegmentation is a challenging and critical operation in the automated skin lesion analysis workflow.",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is the main obstacle in obtaining skin lesion data?",
+        "expected": "Input Data",
+        "hit_position": 1,
+        "matched_chunk": "## 2. Input Data\n\nObtaining data in su GLYPH&lt;14&gt; cient quantity and quality is often a significant obstacle to dev",
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.8
+      },
+      {
+        "query": "What loss functions are discussed for skin lesion segmentation?",
+        "expected": "Loss Functions",
+        "hit_position": 1,
+        "matched_chunk": "## 3.2. Loss Functions\n\nA segmentation model f may be formalized as a function ˆ y = f GLYPH&lt;18&gt; ( x ), which maps",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.5
+      },
+      {
+        "query": "What is the output of a skin lesion segmentation model?",
+        "expected": "binary mask",
+        "hit_position": 4,
+        "matched_chunk": "## 3.2. Loss Functions\n\nA segmentation model f may be formalized as a function ˆ y = f GLYPH&lt;18&gt; ( x ), which maps",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is task-incremental learning (TIL) in medical image segmentation?",
+        "expected": "Task-Incremental Learning",
+        "hit_position": 1,
+        "matched_chunk": "## 1 Introduction\n\nFor medical image segmentation, there is an increasing demand for a generalist model capable of handl",
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which datasets were used to evaluate the TIL segmentation framework?",
+        "expected": "cardiac MRI segmentation",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "Which metrics were used to evaluate the TIL segmentation model?",
+        "expected": "Dice Score Coefficient",
+        "hit_position": 5,
+        "matched_chunk": "## 3 Experiments\n\nDataset. We evaluated our method on three tasks: 1) cardiac MRI segmentation [2] with 320 subjects for",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What segmentation backbone was used in the TIL framework?",
+        "expected": "Res-UNet",
+        "hit_position": 5,
+        "matched_chunk": "## 3 Experiments\n\nDataset. We evaluated our method on three tasks: 1) cardiac MRI segmentation [2] with 320 subjects for",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Why is forcing the prior weight to equal the number of classes problematic in EDL?",
+        "expected": "prior weight",
+        "hit_position": 1,
+        "matched_chunk": "- 1. -- Dirichlet 分布的浓度参数 (Concentration Parameter)\n- 这是最终计算出的参数，用来构建 Dirichlet 分布（ Dirichlet PDF\n- ）。\n- Dirichlet 分布被用来",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What does the concentration parameter do in the Dirichlet distribution for evidential deep learning?",
+        "expected": "Dirichlet",
+        "hit_position": 1,
+        "matched_chunk": "- 1. -- Dirichlet 分布的浓度参数 (Concentration Parameter)\n- 这是最终计算出的参数，用来构建 Dirichlet 分布（ Dirichlet PDF\n- ）。\n- Dirichlet 分布被用来",
+        "precision_at_k": 0.2,
+        "recall_at_k": 0.5
+      },
+      {
+        "query": "What is the role of the Task-Oriented Adapter (TOA) in the TIL framework?",
+        "expected": "Task-Oriented Adapter",
+        "hit_position": 1,
+        "matched_chunk": "## 4 Conclusion\n\nThis paper presents a novel TIL framework for medical image segmentation, addressing concurrent appeara",
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is the main contribution of the COVID-19 X-ray classification framework?",
+        "expected": "classify chest X-ray images as COVID-19",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "How does a brain tumor get its name?",
+        "expected": "named after the cell type",
+        "hit_position": 1,
+        "matched_chunk": "## patient information you can trust from our partners at MAYFIELD\n\n\n## Brain Tumors: an Introduction basic level\n\n\n## O",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What equipment is used to diagnose brain tumors in the reviewed study?",
+        "expected": "magnetic resonance imaging",
+        "hit_position": 1,
+        "matched_chunk": "### OPEN\n\n\n\n\n## Brain tumor detection from images and comparison with transfer learning methods and ͹-layer CNN\n\nMohamma",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.6
+      }
+    ]
+  },
+  "HYBRID 混合": {
+    "stats": {
+      "hit_at_1": 0.5666666666666667,
+      "hit_at_k": 0.9,
+      "mrr": 0.6927777777777777,
+      "precision_at_k": 0.3399999999999999,
+      "recall_at_k": 0.6772222222222223
+    },
+    "details": [
+      {
+        "query": "What are the types of brain tumors?",
+        "expected": "Types of brain tumors",
+        "hit_position": 1,
+        "matched_chunk": "## Types of brain tumors\n\nThere are over 120 different types of brain tumors. Common brain tumors include:\n\nGliomas\n\n- ·",
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What causes brain tumors?",
+        "expected": "tumor cells reproduce",
+        "hit_position": 1,
+        "matched_chunk": "## patient information you can trust from our partners at MAYFIELD\n\n\n## Brain Tumors: an Introduction basic level\n\n\n## O",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which imaging tests are used to diagnose brain tumors?",
+        "expected": "How is a diagnosis made?",
+        "hit_position": 1,
+        "matched_chunk": "## How is a diagnosis made?\n\nFirst, the doctor will obtain your personal and family medical history and perform a comple",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "How is radiation therapy used to treat brain tumors?",
+        "expected": "Radiation",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.6666666666666666
+      },
+      {
+        "query": "What are the common symptoms of brain tumors?",
+        "expected": "Frontal lobe tumors may cause",
+        "hit_position": 2,
+        "matched_chunk": "## Frontal lobe tumors may cause:\n\n- · Behavioral and emotional changes\n- · Impaired judgment\n- · Impaired sense of smel",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What treatments are available for brain tumors?",
+        "expected": "What treatments are available?",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Who treats brain tumors?",
+        "expected": "Who treats brain tumors?",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "How does chemotherapy work for brain tumors?",
+        "expected": "Chemotherapy",
+        "hit_position": 1,
+        "matched_chunk": "## Chemotherapy\n\nhemotherapy drugs work by interrupting cell division. However, it affects not only tumor cells but orma",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.75
+      },
+      {
+        "query": "What is the goal of brain tumor surgery?",
+        "expected": "Surgery",
+        "hit_position": 1,
+        "matched_chunk": "## Surgery\n\nSurgery is the treatment of choice for brain tumors that can be reached without causing significant injury t",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.5
+      },
+      {
+        "query": "Which model achieved the best accuracy for brain tumor detection from MRI images?",
+        "expected": "EfficientNetB4",
+        "hit_position": 3,
+        "matched_chunk": "## Material method\n\nThis section describes the dataset, the classification algorithm (CNN) used in the study, and the tr",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.4
+      },
+      {
+        "query": "Why is preprocessing important before chest X-ray classification?",
+        "expected": "Preprocessing",
+        "hit_position": 3,
+        "matched_chunk": "## Preprocessing\n\nThe purpose of the pre-processing phase is to prepare the X-ray images for classification using CNN pr",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.25
+      },
+      {
+        "query": "What is transfer learning and how is it used for medical imaging classification?",
+        "expected": "transfer learning",
+        "hit_position": 1,
+        "matched_chunk": "### OPEN\n\n\n\n\n## Brain tumor detection from images and comparison with transfer learning methods and ͹-layer CNN\n\nMohamma",
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "Which image enhancement techniques are applied to X-ray images in the study?",
+        "expected": "histeq",
+        "hit_position": 2,
+        "matched_chunk": "## Conclusion and future work\n\nIn this research, a framework has been developed for automatically classifying chest X-ra",
+        "precision_at_k": 0.2,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "Which pre-trained CNN models are used for chest X-ray classification?",
+        "expected": "VGG19",
+        "hit_position": 1,
+        "matched_chunk": "## Experimental results\n\nThis section presents the experimental results of the proposed framework to evaluate its perfor",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.25
+      },
+      {
+        "query": "What is the standard diagnosis of COVID-19 based on and what is its limitation?",
+        "expected": "swabs from the throat and nose",
+        "hit_position": 1,
+        "matched_chunk": "### OPEN\n\n\n\n\n## COVID-ͷ9 detection from chest X-ray images using transfer learning\n\nEnas M. F. El Houby\n\nCOVID-ͷ9 is a k",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Where and when did COVID-19 first appear?",
+        "expected": "Wuhan",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "Why is segmentation a critical operation in automated skin lesion analysis?",
+        "expected": "Segmentation is a challenging and critical operation",
+        "hit_position": 1,
+        "matched_chunk": "## 1. Introduction\n\nSegmentation is a challenging and critical operation in the automated skin lesion analysis workflow.",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is the main obstacle in obtaining skin lesion data?",
+        "expected": "Input Data",
+        "hit_position": 1,
+        "matched_chunk": "## 1. Introduction\n\nSegmentation is a challenging and critical operation in the automated skin lesion analysis workflow.",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.6
+      },
+      {
+        "query": "What loss functions are discussed for skin lesion segmentation?",
+        "expected": "Loss Functions",
+        "hit_position": 1,
+        "matched_chunk": "## 3.2. Loss Functions\n\nA segmentation model f may be formalized as a function ˆ y = f GLYPH&lt;18&gt; ( x ), which maps",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "What is the output of a skin lesion segmentation model?",
+        "expected": "binary mask",
+        "hit_position": 5,
+        "matched_chunk": "## 3.2. Loss Functions\n\nA segmentation model f may be formalized as a function ˆ y = f GLYPH&lt;18&gt; ( x ), which maps",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is task-incremental learning (TIL) in medical image segmentation?",
+        "expected": "Task-Incremental Learning",
+        "hit_position": 1,
+        "matched_chunk": "## 1 Introduction\n\nFor medical image segmentation, there is an increasing demand for a generalist model capable of handl",
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which datasets were used to evaluate the TIL segmentation framework?",
+        "expected": "cardiac MRI segmentation",
+        "hit_position": 3,
+        "matched_chunk": "## 3 Experiments\n\nDataset. We evaluated our method on three tasks: 1) cardiac MRI segmentation [2] with 320 subjects for",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which metrics were used to evaluate the TIL segmentation model?",
+        "expected": "Dice Score Coefficient",
+        "hit_position": 4,
+        "matched_chunk": "## 3 Experiments\n\nDataset. We evaluated our method on three tasks: 1) cardiac MRI segmentation [2] with 320 subjects for",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What segmentation backbone was used in the TIL framework?",
+        "expected": "Res-UNet",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "Why is forcing the prior weight to equal the number of classes problematic in EDL?",
+        "expected": "prior weight",
+        "hit_position": 2,
+        "matched_chunk": "- 1. -- Dirichlet 分布的浓度参数 (Concentration Parameter)\n- 这是最终计算出的参数，用来构建 Dirichlet 分布（ Dirichlet PDF\n- ）。\n- Dirichlet 分布被用来",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What does the concentration parameter do in the Dirichlet distribution for evidential deep learning?",
+        "expected": "Dirichlet",
+        "hit_position": 3,
+        "matched_chunk": "- 1. -- Dirichlet 分布的浓度参数 (Concentration Parameter)\n- 这是最终计算出的参数，用来构建 Dirichlet 分布（ Dirichlet PDF\n- ）。\n- Dirichlet 分布被用来",
+        "precision_at_k": 0.2,
+        "recall_at_k": 0.5
+      },
+      {
+        "query": "What is the role of the Task-Oriented Adapter (TOA) in the TIL framework?",
+        "expected": "Task-Oriented Adapter",
+        "hit_position": 1,
+        "matched_chunk": "## 2.2 Task-Oriented Adapter (TOA)\n\nIn our TIL scenario, BJD needs to scale across diverse data distributions of previou",
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.8
+      },
+      {
+        "query": "What is the main contribution of the COVID-19 X-ray classification framework?",
+        "expected": "classify chest X-ray images as COVID-19",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "How does a brain tumor get its name?",
+        "expected": "named after the cell type",
+        "hit_position": 1,
+        "matched_chunk": "## patient information you can trust from our partners at MAYFIELD\n\n\n## Brain Tumors: an Introduction basic level\n\n\n## O",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What equipment is used to diagnose brain tumors in the reviewed study?",
+        "expected": "magnetic resonance imaging",
+        "hit_position": 2,
+        "matched_chunk": "### OPEN\n\n\n\n\n## Brain tumor detection from images and comparison with transfer learning methods and ͹-layer CNN\n\nMohamma",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.6
+      }
+    ]
+  },
+  "HYBRID+重排": {
+    "stats": {
+      "hit_at_1": 0.8333333333333334,
+      "hit_at_k": 0.9,
+      "mrr": 0.8555555555555556,
+      "precision_at_k": 0.3399999999999999,
+      "recall_at_k": 0.6772222222222223
+    },
+    "details": [
+      {
+        "query": "What are the types of brain tumors?",
+        "expected": "Types of brain tumors",
+        "hit_position": 1,
+        "matched_chunk": "## Types of brain tumors\n\nThere are over 120 different types of brain tumors. Common brain tumors include:\n\nGliomas\n\n- ·",
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What causes brain tumors?",
+        "expected": "tumor cells reproduce",
+        "hit_position": 1,
+        "matched_chunk": "## patient information you can trust from our partners at MAYFIELD\n\n\n## Brain Tumors: an Introduction basic level\n\n\n## O",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which imaging tests are used to diagnose brain tumors?",
+        "expected": "How is a diagnosis made?",
+        "hit_position": 1,
+        "matched_chunk": "## How is a diagnosis made?\n\nFirst, the doctor will obtain your personal and family medical history and perform a comple",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "How is radiation therapy used to treat brain tumors?",
+        "expected": "Radiation",
+        "hit_position": 1,
+        "matched_chunk": "## Surgery\n\nSurgery is the treatment of choice for brain tumors that can be reached without causing significant injury t",
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.6666666666666666
+      },
+      {
+        "query": "What are the common symptoms of brain tumors?",
+        "expected": "Frontal lobe tumors may cause",
+        "hit_position": 1,
+        "matched_chunk": "## Frontal lobe tumors may cause:\n\n- · Behavioral and emotional changes\n- · Impaired judgment\n- · Impaired sense of smel",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What treatments are available for brain tumors?",
+        "expected": "What treatments are available?",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Who treats brain tumors?",
+        "expected": "Who treats brain tumors?",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "How does chemotherapy work for brain tumors?",
+        "expected": "Chemotherapy",
+        "hit_position": 1,
+        "matched_chunk": "## Chemotherapy\n\nhemotherapy drugs work by interrupting cell division. However, it affects not only tumor cells but orma",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.75
+      },
+      {
+        "query": "What is the goal of brain tumor surgery?",
+        "expected": "Surgery",
+        "hit_position": 1,
+        "matched_chunk": "## Who treats brain tumors?\n\nBecause there are so many kinds of brain tumors and some are complex to treat, many doctors",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.5
+      },
+      {
+        "query": "Which model achieved the best accuracy for brain tumor detection from MRI images?",
+        "expected": "EfficientNetB4",
+        "hit_position": 3,
+        "matched_chunk": "## Material method\n\nThis section describes the dataset, the classification algorithm (CNN) used in the study, and the tr",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.4
+      },
+      {
+        "query": "Why is preprocessing important before chest X-ray classification?",
+        "expected": "Preprocessing",
+        "hit_position": 1,
+        "matched_chunk": "## Preprocessing\n\nThe purpose of the pre-processing phase is to prepare the X-ray images for classification using CNN pr",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.25
+      },
+      {
+        "query": "What is transfer learning and how is it used for medical imaging classification?",
+        "expected": "transfer learning",
+        "hit_position": 1,
+        "matched_chunk": "## The proposed framework\n\nIn this section, the proposed framework has been explained. First, the used chest X-ray datas",
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "Which image enhancement techniques are applied to X-ray images in the study?",
+        "expected": "histeq",
+        "hit_position": 1,
+        "matched_chunk": "## Conclusion and future work\n\nIn this research, a framework has been developed for automatically classifying chest X-ra",
+        "precision_at_k": 0.2,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "Which pre-trained CNN models are used for chest X-ray classification?",
+        "expected": "VGG19",
+        "hit_position": 1,
+        "matched_chunk": "## Conclusion and future work\n\nIn this research, a framework has been developed for automatically classifying chest X-ra",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.25
+      },
+      {
+        "query": "What is the standard diagnosis of COVID-19 based on and what is its limitation?",
+        "expected": "swabs from the throat and nose",
+        "hit_position": 1,
+        "matched_chunk": "### OPEN\n\n\n\n\n## COVID-ͷ9 detection from chest X-ray images using transfer learning\n\nEnas M. F. El Houby\n\nCOVID-ͷ9 is a k",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Where and when did COVID-19 first appear?",
+        "expected": "Wuhan",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "Why is segmentation a critical operation in automated skin lesion analysis?",
+        "expected": "Segmentation is a challenging and critical operation",
+        "hit_position": 1,
+        "matched_chunk": "## 1. Introduction\n\nSegmentation is a challenging and critical operation in the automated skin lesion analysis workflow.",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is the main obstacle in obtaining skin lesion data?",
+        "expected": "Input Data",
+        "hit_position": 1,
+        "matched_chunk": "## 2. Input Data\n\nObtaining data in su GLYPH&lt;14&gt; cient quantity and quality is often a significant obstacle to dev",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.6
+      },
+      {
+        "query": "What loss functions are discussed for skin lesion segmentation?",
+        "expected": "Loss Functions",
+        "hit_position": 1,
+        "matched_chunk": "## 3.2. Loss Functions\n\nA segmentation model f may be formalized as a function ˆ y = f GLYPH&lt;18&gt; ( x ), which maps",
+        "precision_at_k": 0.4,
+        "recall_at_k": 0.3333333333333333
+      },
+      {
+        "query": "What is the output of a skin lesion segmentation model?",
+        "expected": "binary mask",
+        "hit_position": 1,
+        "matched_chunk": "## 3.2. Loss Functions\n\nA segmentation model f may be formalized as a function ˆ y = f GLYPH&lt;18&gt; ( x ), which maps",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What is task-incremental learning (TIL) in medical image segmentation?",
+        "expected": "Task-Incremental Learning",
+        "hit_position": 1,
+        "matched_chunk": "## 1 Introduction\n\nFor medical image segmentation, there is an increasing demand for a generalist model capable of handl",
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which datasets were used to evaluate the TIL segmentation framework?",
+        "expected": "cardiac MRI segmentation",
+        "hit_position": 1,
+        "matched_chunk": "## 3 Experiments\n\nDataset. We evaluated our method on three tasks: 1) cardiac MRI segmentation [2] with 320 subjects for",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "Which metrics were used to evaluate the TIL segmentation model?",
+        "expected": "Dice Score Coefficient",
+        "hit_position": 3,
+        "matched_chunk": "## 3 Experiments\n\nDataset. We evaluated our method on three tasks: 1) cardiac MRI segmentation [2] with 320 subjects for",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What segmentation backbone was used in the TIL framework?",
+        "expected": "Res-UNet",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "Why is forcing the prior weight to equal the number of classes problematic in EDL?",
+        "expected": "prior weight",
+        "hit_position": 1,
+        "matched_chunk": "- 1. -- Dirichlet 分布的浓度参数 (Concentration Parameter)\n- 这是最终计算出的参数，用来构建 Dirichlet 分布（ Dirichlet PDF\n- ）。\n- Dirichlet 分布被用来",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What does the concentration parameter do in the Dirichlet distribution for evidential deep learning?",
+        "expected": "Dirichlet",
+        "hit_position": 1,
+        "matched_chunk": "- 1. -- Dirichlet 分布的浓度参数 (Concentration Parameter)\n- 这是最终计算出的参数，用来构建 Dirichlet 分布（ Dirichlet PDF\n- ）。\n- Dirichlet 分布被用来",
+        "precision_at_k": 0.2,
+        "recall_at_k": 0.5
+      },
+      {
+        "query": "What is the role of the Task-Oriented Adapter (TOA) in the TIL framework?",
+        "expected": "Task-Oriented Adapter",
+        "hit_position": 1,
+        "matched_chunk": "## 4 Conclusion\n\nThis paper presents a novel TIL framework for medical image segmentation, addressing concurrent appeara",
+        "precision_at_k": 0.8,
+        "recall_at_k": 0.8
+      },
+      {
+        "query": "What is the main contribution of the COVID-19 X-ray classification framework?",
+        "expected": "classify chest X-ray images as COVID-19",
+        "hit_position": null,
+        "matched_chunk": null,
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0
+      },
+      {
+        "query": "How does a brain tumor get its name?",
+        "expected": "named after the cell type",
+        "hit_position": 1,
+        "matched_chunk": "## patient information you can trust from our partners at MAYFIELD\n\n\n## Brain Tumors: an Introduction basic level\n\n\n## O",
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0
+      },
+      {
+        "query": "What equipment is used to diagnose brain tumors in the reviewed study?",
+        "expected": "magnetic resonance imaging",
+        "hit_position": 1,
+        "matched_chunk": "### OPEN\n\n\n\n\n## Brain tumor detection from images and comparison with transfer learning methods and ͹-layer CNN\n\nMohamma",
+        "precision_at_k": 0.6,
+        "recall_at_k": 0.6
+      }
+    ]
+  }
+}

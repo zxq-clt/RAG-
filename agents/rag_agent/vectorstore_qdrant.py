@@ -21,7 +21,7 @@ class VectorStore:
         self.embedding_dim = config.rag.embedding_dim
         self.distance_metric = config.rag.distance_metric
         self.embedding_model = config.rag.embedding_model
-        self.retrieval_top_k = config.rag.top_k
+        self.retrieval_top_k = config.rag.retrieval_top_k
         self.vector_search_type = config.rag.vector_search_type
         self.vectorstore_local_path = config.rag.vector_local_path
         self.docstore_local_path = config.rag.doc_local_path

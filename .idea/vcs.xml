@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docling-models" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docling-models/model_artifacts/ds4sd--CodeFormula" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/models/bge-small-zh-v1.5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ms-marco-MiniLM-L-6-v2" vcs="Git" />
+  </component>
+</project>

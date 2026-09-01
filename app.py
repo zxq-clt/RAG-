@@ -1,14 +1,17 @@
 import os
 import uuid
 import tempfile
+import json
+import queue
 from typing import Dict, Union, Optional, List
 import glob
 import threading
 import time
+import asyncio
 from io import BytesIO
 
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Depends, Request, Response, Cookie
-from fastapi.responses import JSONResponse, FileResponse, HTMLResponse
+from fastapi.responses import JSONResponse, FileResponse, HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
@@ -103,7 +106,7 @@ def chat(
         session_id = str(uuid.uuid4())
     
     try:
-        response_data = process_query(request.query)
+        response_data = process_query(request.query, session_id=session_id)
         response_text = response_data['messages'][-1].content
         
         # Set session cookie
@@ -113,7 +116,8 @@ def chat(
         result = {
             "status": "success",
             "response": response_text, 
-            "agent": response_data["agent_name"]
+            "agent": response_data["agent_name"],
+            "sources": response_data.get("rag_sources") or []
         }
         
         # If it's the skin lesion segmentation agent, check for output image
@@ -127,6 +131,48 @@ def chat(
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/chat/stream")
+async def chat_stream(
+    request: QueryRequest,
+    session_id: Optional[str] = Cookie(None),
+):
+    """SSE streaming endpoint: pushes stage events, then the final answer."""
+    if not session_id:
+        session_id = str(uuid.uuid4())
+
+    event_queue = queue.Queue()
+
+    def _run():
+        try:
+            event_queue.put({"type": "stage", "stage": "routing"})
+            result = process_query(request.query, session_id=session_id)
+            response_text = result["messages"][-1].content
+            agent = result.get("agent_name", "UNKNOWN")
+            sources = result.get("rag_sources") or []
+            event_queue.put({"type": "agent", "agent": agent})
+            event_queue.put({"type": "done", "response": response_text, "agent": agent, "sources": sources})
+        except Exception as exc:
+            event_queue.put({"type": "error", "detail": str(exc)})
+        finally:
+            event_queue.put(None)  # sentinel
+
+    worker = threading.Thread(target=_run, daemon=True)
+    worker.start()
+
+    async def _stream():
+        yield f"data: {json.dumps({'type': 'stage', 'stage': 'start'})}\n\n"
+        while True:
+            item = await asyncio.to_thread(event_queue.get)
+            if item is None:
+                break
+            yield f"data: {json.dumps(item)}\n\n"
+        yield "data: [DONE]\n\n"
+
+    response = StreamingResponse(_stream(), media_type="text/event-stream")
+    response.set_cookie(key="session_id", value=session_id)
+    return response
 
 @app.post("/upload")
 async def upload_image(
@@ -181,7 +227,8 @@ async def upload_image(
         result = {
             "status": "success",
             "response": response_text, 
-            "agent": response_data["agent_name"]
+            "agent": response_data["agent_name"],
+            "sources": response_data.get("rag_sources") or []
         }
         
         # If it's the skin lesion segmentation agent, check for output image

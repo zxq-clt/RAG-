@@ -53,11 +53,13 @@ class ResponseGenerator:
         1. Answer the query based ONLY on the information provided in the context.
         2. If the context doesn't contain relevant information to answer the query, state: "I don't have enough information to answer this question based on the provided context."
         3. Do not use prior knowledge not contained in the context.
-        5. Be concise and accurate.
-        6. Provide a well-structured response with heading, sub-headings and tabular structure if required in markdown format based on retrieved knowledge. Keep the headings and sub-headings small sized.
-        7. Only provide sections that are meaningful to have in a chatbot reply. For example, do not explicitly mention references.
-        8. If values are involved, make sure to respond with perfect values present in context. Do not make up values.
-        9. Do not repeat the question in the answer or response."""
+        4. Be concise and accurate.
+        5. Provide a well-structured response with heading, sub-headings and tabular structure if required in markdown format based on retrieved knowledge. Keep the headings and sub-headings small sized.
+        6. CITE YOUR SOURCES: each document section in the context is numbered ([1], [2], ...). Whenever you use information from a section, append its number in square brackets right after the relevant sentence or paragraph (e.g. "Gliomas are the most common type of brain tumor [1]"). A claim may cite multiple sections, e.g. [1][2].
+        7. Do not fabricate citations - only use numbers that actually appear in the provided context.
+        8. Do not add a separate "References" / "Source documents" section at the end of your answer; inline citations are sufficient.
+        9. If values are involved, make sure to respond with perfect values present in context. Do not make up values.
+        10. Do not repeat the question in the answer or response."""
             
         # Build the prompt
         prompt = f"""You are a medical assistant providing accurate information based on verified medical sources.
@@ -69,7 +71,7 @@ class ResponseGenerator:
         The user has asked the following question:
         {query}
 
-        I've retrieved the following information to help answer this question:
+        I've retrieved the following information to help answer this question. Each section is numbered in square brackets:
 
         {context}
 
@@ -105,47 +107,33 @@ class ResponseGenerator:
             Dict containing response text and source information
         """
         try:
-           
-            # Extract content from documents for context
+
+            # Extract content from documents for context and number each section for citation
             doc_texts = [doc["content"] for doc in retrieved_docs]
-            
-            # Combine retrieved documents into a single context
-            context = "\n\n===DOCUMENT SECTION===\n\n".join(doc_texts)
-            
+            numbered_context = "\n\n===DOCUMENT SECTION===\n\n".join(
+                f"[{i + 1}] " + text for i, text in enumerate(doc_texts)
+            )
+
             # Build the prompt
-            prompt = self._build_prompt(query, context, chat_history)
-            
+            prompt = self._build_prompt(query, numbered_context, chat_history)
+
             # Generate response
             response = self.response_generator_model.invoke(prompt)
-            
-            # Extract sources for citation
+
+            # Extract structured sources for the citation panel
             sources = self._extract_sources(retrieved_docs) if hasattr(self, 'include_sources') and self.include_sources else []
-            
+
             # Calculate confidence
             confidence = self._calculate_confidence(retrieved_docs)
 
-            # Add sources to response
-            if hasattr(self, 'include_sources') and self.include_sources:
-                response_with_source = response.content + "\n\n##### Source documents:"
-                for current_source in sources:
-                    source_path = current_source['path']
-                    source_title = current_source['title']
-                    response_with_source += f"\n- [{source_title}]({source_path})"
-            else:
-                response_with_source = response.content
-            
-            # Add picture paths to response
-            response_with_source_and_picture_paths = response_with_source + "\n\n##### Reference images:"
-            for picture_path in picture_paths:
-                response_with_source_and_picture_paths += f"\n- [{picture_path.split('/')[-1]}]({picture_path})"
-            
-            # Format final response
+            # Format final response (inline [n] citations are inside the text)
             result = {
-                "response": response_with_source_and_picture_paths,
+                "response": response.content,
                 "sources": sources,
-                "confidence": confidence
+                "confidence": confidence,
+                "picture_paths": picture_paths
             }
-            
+
             return result
             
         except Exception as e:
@@ -168,46 +156,40 @@ class ResponseGenerator:
         """
         sources = []
         seen_sources = set()  # Track unique sources to avoid duplicates
-        
-        for doc in documents:
+
+        for idx, doc in enumerate(documents, start=1):
             # Extract source and source_path
             source = doc.get("source")
             source_path = doc.get("source_path")
-            
+
             # Skip if no source information is available
             if not source:
                 continue
-                
+
             # Create a unique identifier for this source
             source_id = f"{source}|{source_path}"
-            
+
             # Skip if we've already included this source
             if source_id in seen_sources:
                 continue
-                
-            # Add to our sources list
+
+            # Add to our sources list (citation number matches the [n] in the context)
             source_info = {
+                "index": idx,
                 "title": source,
                 "path": source_path,
-                "score": doc.get("combined_score", doc.get("rerank_score", doc.get("score", 0.0)))
+                "doc_id": doc.get("id", ""),
+                "score": round(float(doc.get("combined_score", doc.get("rerank_score", doc.get("score", 0.0)))), 4),
+                "snippet": (doc.get("content") or "")[:600]
             }
-            
+
             sources.append(source_info)
             seen_sources.add(source_id)
-        
+
         # Sort sources by score from highest to lowest
         sources.sort(key=lambda x: x.get("score", 0), reverse=True)
-        
-        # Format the final sources list, removing the scores which were just used for sorting
-        formatted_sources = []
-        for source in sources:
-            formatted_source = {
-                "title": source["title"],
-                "path": source["path"]
-            }
-            formatted_sources.append(formatted_source)
-            
-        return formatted_sources
+
+        return sources
 
     def _calculate_confidence(self, documents: List[Dict[str, Any]]) -> float:
         """
